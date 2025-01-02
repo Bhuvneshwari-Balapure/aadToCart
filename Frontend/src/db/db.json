@@ -1,0 +1,124 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Classic Denim Jacket",
+        "brand": "Levi's",
+        "category": "Jackets",
+        "price": 99.99,
+        "rating": 4.5,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSco0n-QwzpsZEVhf-TMbJbbZppbtVhb-nqjQX7KTu12qMrt8sjLLe8VVE2RdhnzXd2xc&usqp=CAU",
+        "description": "A stylish and timeless denim jacket for all seasons.",
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["Blue", "Black"]
+      },
+      {
+        "id": 2,
+        "name": "Graphic T-Shirt",
+        "brand": "H&M",
+        "category": "T-Shirts",
+        "price": 19.99,
+        "rating": 4.2,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsk9UaBINExeZOCOACTf6OoRgdWva7TT4iNQ&s",
+        "description": "A trendy t-shirt with bold graphics for casual wear.",
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["White", "Gray"]
+      },
+      {
+        "id": 3,
+        "name": "Slim Fit Chinos",
+        "brand": "Zara",
+        "category": "Pants",
+        "price": 49.99,
+        "rating": 4.3,
+        "image": "https://i.ebayimg.com/images/g/lVkAAOSw73JkaNMJ/s-l1200.png",
+        "description": "Comfortable slim-fit chinos suitable for formal and casual occasions.",
+        "sizes": ["30", "32", "34", "36"],
+        "colors": ["Beige", "Navy Blue"]
+      },
+      {
+        "id": 4,
+        "name": "Summer Maxi Dress",
+        "brand": "Forever 21",
+        "category": "Dresses",
+        "price": 39.99,
+        "rating": 4.7,
+        "image": "https://bluezoneplanet.com/cdn/shop/files/Printed-Crisscross-Tie-Back-Knee-Length-Dress-TOPS-DRESSES-Chestnut.jpg?v=1701102628",
+        "description": "A breezy and colorful maxi dress perfect for summer outings.",
+        "sizes": ["S", "M", "L"],
+        "colors": ["Red", "Yellow", "Floral Print"]
+      },
+      {
+        "id": 5,
+        "name": "Sneakers",
+        "brand": "Nike",
+        "category": "Footwear",
+        "price": 79.99,
+        "rating": 4.8,
+        "image": "https://w7.pngwing.com/pngs/480/849/png-transparent-unpaired-blue-and-orange-nike-running-shoe-nike-free-air-force-shoe-sneakers-nike-shoes-background-blue-fashion-outdoor-shoe-thumbnail.png",
+        "description": "Comfortable and durable sneakers for everyday wear.",
+        "sizes": [7, 8, 9, 10, 11],
+        "colors": ["White", "Black", "Gray"]
+      },
+      {
+        "id": 6,
+        "name": "Hooded Sweatshirt",
+        "brand": "Adidas",
+        "category": "Sweatshirts",
+        "price": 59.99,
+        "rating": 4.6,
+        "image": "https://e7.pngegg.com/pngimages/916/422/png-clipart-hoodie-t-shirt-adidas-originals-clothing-new-arrival-tshirt-blue.png",
+        "description": "A soft and cozy hooded sweatshirt for a casual look.",
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["Black", "Green"]
+      },
+      {
+        "id": 7,
+        "name": "Formal Blazer",
+        "brand": "Raymond",
+        "category": "Blazers",
+        "price": 149.99,
+        "rating": 4.8,
+        "image": "https://5.imimg.com/data5/SELLER/Default/2024/1/375991752/FZ/ZV/QF/208040773/blazer-for-men-500x500.jpg",
+        "description": "A premium quality blazer for formal occasions.",
+        "sizes": ["38", "40", "42", "44"],
+        "colors": ["Black", "Navy Blue"]
+      },
+      {
+        "id": 8,
+        "name": "Ripped Skinny Jeans",
+        "brand": "Calvin Klein",
+        "category": "Jeans",
+        "price": 89.99,
+        "rating": 4.4,
+        "image": "https://media.gettyimages.com/id/1447463498/photo/model-paola-manes-walks-the-runway-in-a-nubuck-leather-white-tank-top-denim-jeans-and-the.jpg?s=612x612&w=gi&k=20&c=4HW6Y7hvlGErHBZfUdX3mNfnwzJ_upjkGz42PVA99No=",
+        "description": "Stylish ripped skinny jeans with a modern fit.",
+        "sizes": ["28", "30", "32", "34"],
+        "colors": ["Light Blue", "Dark Blue"]
+      },
+      {
+        "id": 9,
+        "name": "Leather Backpack",
+        "brand": "Fossil",
+        "category": "Accessories",
+        "price": 129.99,
+        "rating": 4.7,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcUnIGUEzGRx6hHrOFxhlUaKpcTHiq1Q7YYw&s",
+        "description": "A premium leather backpack for both style and utility.",
+        "colors": ["Brown", "Black"]
+      },
+      {
+        "id": 10,
+        "name": "Puffer Jacket",
+        "brand": "Uniqlo",
+        "category": "Jackets",
+        "price": 119.99,
+        "rating": 4.6,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8vh_IytWwjYYBien8JXL-dfcucy8KHqSWC4lBlel0_icCmBIGClrY-xQSgNK7_xyPs7c&usqp=CAU",
+        "description": "Lightweight and warm puffer jacket for chilly days.",
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["Olive", "Maroon"]
+      }
+    ]
+  }
+  
