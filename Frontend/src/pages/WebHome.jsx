@@ -1,7 +1,6 @@
 
 const WebHome=()=>{
     
-   
     
     return(
         <>

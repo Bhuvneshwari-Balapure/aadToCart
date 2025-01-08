@@ -6,6 +6,8 @@ import Website from "./pages/Website";
 import WebHome from "./pages/WebHome";
 import WebProduct from "./pages/WebProduct";
 import WebCart from "./pages/WebCart";
+import AdminLayout from "./components/Admin/AdminLayout";
+import Display from "./pages/Admin/Display";
 
 const App = () => {
   return (
@@ -20,9 +22,14 @@ const App = () => {
         {/* Route for Website */}
         <Route path="/website" element={<Website />} >
           <Route index element={<WebHome/>}/>
-          <Route path="home" element={<WebHome/>}/>
+          <Route path="Webhome" element={<WebHome/>}/>
           <Route path="products" element={<WebProduct/>}/>
           <Route path="cart" element={<WebCart/>}/>
+        </Route>
+
+        <Route path="/" element={<AdminLayout/>}>
+          <Route index element={<Display/>}/>
+          <Route path="display" element={<Display/>}/>
         </Route>
 
       </Routes>

@@ -77,7 +77,7 @@ const WebHeader = () => {
                 style={{ maxHeight: "100px" }}
                 navbarScroll
               >
-                <Nav.Link as={Link} to="home">
+                <Nav.Link as={Link} to="Webhome">
                   Home
                 </Nav.Link>
                 <Nav.Link as={Link} to="about">

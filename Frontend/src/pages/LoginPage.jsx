@@ -36,11 +36,14 @@ const LoginPage = () => {
   return (
     <>
       {/* User Icon to open modal */}
+      <span style={{cursor:"pointer"}} onClick={() => setModalShow(true)}>
       <FaUserCircle
         size={30}
         style={{ color: "blue", cursor: "pointer" }}
-        onClick={() => setModalShow(true)}
-      />
+        
+      />User Login
+      </span>
+      
 
       {/* Login Modal */}
       <Modal show={modalShow} onHide={() => setModalShow(false)} centered>
