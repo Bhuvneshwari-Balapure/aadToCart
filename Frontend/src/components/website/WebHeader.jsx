@@ -10,26 +10,20 @@ import { IoMdLogOut } from "react-icons/io";
 
 //useNavigation
 import { useNavigate } from "react-router-dom";
-import { useEffect , useState } from "react"
-//useSelector 
+import { useEffect, useState } from "react";
+//useSelector
 import { useSelector } from "react-redux";
 const WebHeader = () => {
-
-  //useSelector 
-  const cart = useSelector(state=>state.cart.cart2)
-  const[userName , setUserName]=useState("")
-  useEffect(()=>{
-      const Uname = window.localStorage.getItem("Name")
-      setUserName(Uname)
-      if(!Uname){
-        navigate("/registration")
-      }
-      
-  },[])
-
-
-
-
+  //useSelector
+  const cart = useSelector((state) => state.cart.cart2);
+  const [userName, setUserName] = useState("");
+  useEffect(() => {
+    const Uname = window.localStorage.getItem("Name");
+    setUserName(Uname);
+    if (!Uname) {
+      navigate("/registration");
+    }
+  }, []);
 
   const navigate = useNavigate();
   const Logout = () => {
@@ -44,7 +38,6 @@ const WebHeader = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "start",
-        
       }}
     >
       <div className="w-100 ">
@@ -53,15 +46,13 @@ const WebHeader = () => {
             <Navbar.Brand>Hello , Wellcome {userName}</Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">
-              
               <Nav.Link
-                  className="d-flex flex-column align-items-center text-danger"
-                  onClick={Logout}
-                >
-                  <IoMdLogOut size={30} />
-                  <small>Logout</small>
-                </Nav.Link>
-              
+                className="d-flex flex-column align-items-center text-danger"
+                onClick={Logout}
+              >
+                <IoMdLogOut size={30} />
+                <small>Logout</small>
+              </Nav.Link>
             </Navbar.Collapse>
           </Container>
         </Navbar>
@@ -89,6 +80,7 @@ const WebHeader = () => {
                 <Nav.Link as={Link} to="contact">
                   Contact
                 </Nav.Link>
+                <Nav.Link as={Link} to="checkOut"></Nav.Link>
               </Nav>
               <Form className="d-flex">
                 <Form.Control
@@ -131,15 +123,11 @@ const WebHeader = () => {
                   <FaCartArrowDown size={30} />
                   <small>Cart</small>
                 </Nav.Link>
-
-                
               </Nav>
             </Navbar.Collapse>
           </Container>
         </Navbar>
       </div>
-
-      
     </div>
   );
 };

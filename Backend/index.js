@@ -1,9 +1,11 @@
-const express = require('express');
-const app = express();  
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const UserRoute = require('./routes/userRoutes');
-const ConnectDB = require('./DataBase/config');
+const express = require("express");
+const app = express();
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const UserRoute = require("./routes/userRoutes");
+const productRoute = require("./routes/productRoutes");
+const paymentRoute = require("./routes/paymentRoute");
+const ConnectDB = require("./DataBase/config");
 app.use(express.json());
 //Body-parser
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -13,8 +15,10 @@ app.use(cors());
 //DataBase Connection
 ConnectDB();
 //Routes
-app.use('/users',UserRoute);
-//server created 
-app.listen(port,()=>{
-    console.log(`Server Run on ${port} port`)
-})
+app.use("/users", UserRoute);
+app.use("/products", productRoute);
+app.use("/api/payment/", paymentRoute);
+//server created
+app.listen(port, () => {
+  console.log(`Server Run on ${port} port`);
+});
