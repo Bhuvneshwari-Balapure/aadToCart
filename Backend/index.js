@@ -5,6 +5,7 @@ const cors = require("cors");
 const UserRoute = require("./routes/userRoutes");
 const productRoute = require("./routes/productRoutes");
 const paymentRoute = require("./routes/paymentRoute");
+const adminRoute = require("./routes/adminRoute");
 const ConnectDB = require("./DataBase/config");
 app.use(express.json());
 //Body-parser
@@ -18,6 +19,7 @@ ConnectDB();
 app.use("/users", UserRoute);
 app.use("/products", productRoute);
 app.use("/api/payment/", paymentRoute);
+app.use("/admin", adminRoute);
 //server created
 app.listen(port, () => {
   console.log(`Server Run on ${port} port`);

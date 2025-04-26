@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { message } from "antd";
-import AdminLogin from "../Admin/AdminLogin";
+// import AdminLogin from "../Admin/AdminLogin";
 const RegistrationPage = () => {
   const [input, setInput] = useState({});
 
@@ -113,9 +113,9 @@ const RegistrationPage = () => {
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <AdminLogin />
-        </div>
+        </div> */}
       </div>
     </>
   );

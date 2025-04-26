@@ -10,6 +10,7 @@ import { message } from "antd";
 const LoginPage = () => {
   const [modalShow, setModalShow] = useState(false); // Modal visibility
   const [input, setInput] = useState({ email: "", password: "" }); // Input state
+  const [userType, setUserType] = useState("");
   const navigate = useNavigate();
 
   const handleInput = (e) => {
@@ -17,27 +18,44 @@ const LoginPage = () => {
     let value = e.target.value;
     setInput((values) => ({ ...values, [name]: value }));
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    let api = "http://localhost:8000/users/login";
+  const handleSubmit = async () => {
+    if (userType === "admin") {
+      let api = "http://localhost:8000/admin/adminlogin";
+      try {
+        const response = await axios.post(api, {
+          email: input.email,
+          password: input.password,
+        });
+        if (response.status === 200) {
+          localStorage.setItem("adminname", response.data.name);
+        }
+        navigate("/display");
+      } catch (error) {
+        console.log(error);
+      }
+    } else if (userType === "user") {
+      let api = "http://localhost:8000/users/login";
 
-    axios
-      .post(api, { email: input.email, password: input.password })
-      .then((res) => {
-        localStorage.setItem("Name", res.data.user.name);
-        localStorage.setItem("authToken", res.data.token);
+      axios
+        .post(api, { email: input.email, password: input.password })
+        .then((res) => {
+          localStorage.setItem("Name", res.data.user.name);
+          localStorage.setItem("authToken", res.data.token);
 
-        message.success(res.data.msg);
-        setModalShow(false);
-        navigate("/Website");
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.error(err.response);
-        message.error(
-          err.response?.data?.msg || "Login failed. Please try again."
-        );
-      });
+          message.success(res.data.msg);
+          setModalShow(false);
+          navigate("/Website");
+          console.log(res.data);
+        })
+        .catch((err) => {
+          console.error(err.response);
+          message.error(
+            err.response?.data?.msg || "Login failed. Please try again."
+          );
+        });
+    } else {
+      message.error("User/Admin Not Found");
+    }
   };
 
   return (
@@ -77,6 +95,18 @@ const LoginPage = () => {
                 placeholder="Enter your password"
                 onChange={handleInput}
               />
+            </Form.Group>
+            {/* switch as User/Admin */}
+            <Form.Group className="mb-3" controlId="formBasicUserType">
+              <Form.Label>Login As</Form.Label>
+              <Form.Select
+                value={userType}
+                onChange={(e) => setUserType(e.target.value)}
+              >
+                <option>Login As (Admin/User)</option>
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+              </Form.Select>
             </Form.Group>
 
             {/* Submit Button */}
